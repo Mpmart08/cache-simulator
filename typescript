@@ -1,0 +1,1361 @@
+Script started on Tue 16 Feb 2016 03:24:55 AM EST
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ ./script
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear./script
+seq 1 10
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ mae[Kke
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+cachesim_driver.cpp: In function ‘void print_statistics(cache_stats_t*)’:
+cachesim_driver.cpp:125:27: error: ‘best’ was not declared in this scope
+     printf("\nAAT: %f\n", best->AAT);
+                           ^
+make: *** [cachesim_driver.o] Error 1
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+cachesim_driver.cpp: In function ‘void print_statistics(cache_stats_t*)’:
+cachesim_driver.cpp:125:36: error: ‘struct cache_stats_t’ has no member named ‘AAT’
+     printf("\nAAT: %f, ", p_stats->AAT);
+                                    ^
+cachesim_driver.cpp:126:32: error: ‘c2’ was not declared in this scope
+     printf("C: %" PRIu64 ", ", c2);
+                                ^
+cachesim_driver.cpp:127:32: error: ‘b2’ was not declared in this scope
+     printf("B: %" PRIu64 ", ", b2);
+                                ^
+cachesim_driver.cpp:128:32: error: ‘s2’ was not declared in this scope
+     printf("S: %" PRIu64 ", ", s2);
+                                ^
+cachesim_driver.cpp:129:32: error: ‘c1’ was not declared in this scope
+     printf("c: %" PRIu64 ", ", c1);
+                                ^
+cachesim_driver.cpp:130:32: error: ‘b1’ was not declared in this scope
+     printf("b: %" PRIu64 ", ", b1);
+                                ^
+cachesim_driver.cpp:131:32: error: ‘s1’ was not declared in this scope
+     printf("s: %" PRIu64 ", ", s1);
+                                ^
+cachesim_driver.cpp:132:32: error: ‘v’ was not declared in this scope
+     printf("v: %" PRIu64 "\n", v);
+                                ^
+make: *** [cachesim_driver.o] Error 1
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make cea[K[Klean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+cachesim_driver.cpp: In function ‘int main(int, char**)’:
+cachesim_driver.cpp:105:55: error: too many arguments to function ‘void print_statistics(cache_stats_t*)’
+     print_statistics(&stats, c1, b1, s1, v, c2, b2, s2);
+                                                       ^
+cachesim_driver.cpp:32:6: note: declared here
+ void print_statistics(cache_stats_t* p_stats);
+      ^
+cachesim_driver.cpp: In function ‘void print_statistics(cache_stats_t*, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t)’:
+cachesim_driver.cpp:126:36: error: ‘struct cache_stats_t’ has no member named ‘AAT’
+     printf("\nAAT: %f, ", p_stats->AAT);
+                                    ^
+make: *** [cachesim_driver.o] Error 1
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+cachesim_driver.cpp: In function ‘int main(int, char**)’:
+cachesim_driver.cpp:105:55: error: too many arguments to function ‘void print_statistics(cache_stats_t*)’
+     print_statistics(&stats, c1, b1, s1, v, c2, b2, s2);
+                                                       ^
+cachesim_driver.cpp:32:6: note: declared here
+ void print_statistics(cache_stats_t* p_stats);
+      ^
+cachesim_driver.cpp: In function ‘void print_statistics(cache_stats_t*, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t)’:
+cachesim_driver.cpp:126:36: error: ‘struct cache_stats_t’ has no member named ‘AAT’
+     printf("\nAAT: %f, ", p_stats->AAT);
+                                    ^
+make: *** [cachesim_driver.o] Error 1
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clean
+No command 'clean' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+ Command 'pclean' from package 'pbuilder-scripts' (universe)
+ Command 'uclean' from package 'svn-buildpackage' (universe)
+clean: command not found
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make[K[K[K[Kclear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+cachesim_driver.cpp: In function ‘void print_statistics(cache_stats_t*, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t)’:
+cachesim_driver.cpp:127:36: error: ‘struct cache_stats_t’ has no member named ‘AAT’
+     printf("\nAAT: %f, ", p_stats->AAT);
+                                    ^
+make: *** [cachesim_driver.o] Error 1
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ c[Kmake clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ sc[K[K./script
+./script: line 15: "0" + "0": syntax error: operand expected (error token is ""0" + "0"")
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear./script
+./script: line 15: first: command not found
+./script: line 16: [: : integer expression expected
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 187.997284, C: 17, B: 0, S: 0, c: 15, b: 0, s: 0, v: 4
+./script: line 15: first: command not found
+./script: line 16: [: : integer expression expected
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 179.803513, C: 17, B: 0, S: 1, c: 15, b: 0, s: 0, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 180.634125, C: 17, B: 0, S: 1, c: 15, b: 0, s: 1, v: 4
+./script: line 15: first: command not found
+./script: line 16: [: : integer expression expected
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 179.886154, C: 17, B: 0, S: 2, c: 15, b: 0, s: 0, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 180.616318, C: 17, B: 0, S: 2, c: 15, b: 0, s: 1, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 181.747101, C: 17, B: 0, S: 2, c: 15, b: 0, s: 2, v: 4
+./script: line 15: first: command not found
+./script: line 16: [: : integer expression expected
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 180.082809, C: 17, B: 0, S: 3, c: 15, b: 0, s: 0, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 180.796875, C: 17, B: 0, S: 3, c: 15, b: 0, s: 1, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 181.916641, C: 17, B: 0, S: 3, c: 15, b: 0, s: 2, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 181.764999, C: 17, B: 0, S: 3, c: 15, b: 0, s: 3, v: 4
+./script: line 15: first: command not found
+./script: line 16: [: : integer expression expected
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 180.296860, C: 17, B: 0, S: 4, c: 15, b: 0, s: 0, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+
+AAT: 181.024475, C: 17, B: 0, S: 4, c: 15, b: 0, s: 1, v: 4
+./script: line 29: second: command not found
+./script: line 30: [: : integer expression expected
+^C
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear./script
+./script: line 15: "0"+"0": syntax error: operand expected (error token is ""0"+"0"")
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ ./script
+
+AAT: 187.997284, C: 17, B: 0, S: 0, c: 15, b: 0, s: 0, v: 4
+
+AAT: 179.803513, C: 17, B: 0, S: 1, c: 15, b: 0, s: 0, v: 4
+
+AAT: 180.634125, C: 17, B: 0, S: 1, c: 15, b: 0, s: 1, v: 4
+
+AAT: 179.886154, C: 17, B: 0, S: 2, c: 15, b: 0, s: 0, v: 4
+
+AAT: 180.616318, C: 17, B: 0, S: 2, c: 15, b: 0, s: 1, v: 4
+
+AAT: 181.747101, C: 17, B: 0, S: 2, c: 15, b: 0, s: 2, v: 4
+
+AAT: 180.082809, C: 17, B: 0, S: 3, c: 15, b: 0, s: 0, v: 4
+
+AAT: 180.796875, C: 17, B: 0, S: 3, c: 15, b: 0, s: 1, v: 4
+
+AAT: 181.916641, C: 17, B: 0, S: 3, c: 15, b: 0, s: 2, v: 4
+
+AAT: 181.764999, C: 17, B: 0, S: 3, c: 15, b: 0, s: 3, v: 4
+
+AAT: 180.296860, C: 17, B: 0, S: 4, c: 15, b: 0, s: 0, v: 4
+
+AAT: 181.024475, C: 17, B: 0, S: 4, c: 15, b: 0, s: 1, v: 4
+
+AAT: 182.142288, C: 17, B: 0, S: 4, c: 15, b: 0, s: 2, v: 4
+
+AAT: 181.987839, C: 17, B: 0, S: 4, c: 15, b: 0, s: 3, v: 4
+
+AAT: 182.244873, C: 17, B: 0, S: 4, c: 15, b: 0, s: 4, v: 4
+
+AAT: 180.506882, C: 17, B: 0, S: 5, c: 15, b: 0, s: 0, v: 4
+
+AAT: 181.236603, C: 17, B: 0, S: 5, c: 15, b: 0, s: 1, v: 4
+
+AAT: 182.356415, C: 17, B: 0, S: 5, c: 15, b: 0, s: 2, v: 4
+
+AAT: 182.205276, C: 17, B: 0, S: 5, c: 15, b: 0, s: 3, v: 4
+
+AAT: 182.460953, C: 17, B: 0, S: 5, c: 15, b: 0, s: 4, v: 4
+
+AAT: 182.650864, C: 17, B: 0, S: 5, c: 15, b: 0, s: 5, v: 4
+
+AAT: 180.716904, C: 17, B: 0, S: 6, c: 15, b: 0, s: 0, v: 4
+
+AAT: 181.446716, C: 17, B: 0, S: 6, c: 15, b: 0, s: 1, v: 4
+
+AAT: 182.569183, C: 17, B: 0, S: 6, c: 15, b: 0, s: 2, v: 4
+
+AAT: 182.419373, C: 17, B: 0, S: 6, c: 15, b: 0, s: 3, v: 4
+
+AAT: 182.675690, C: 17, B: 0, S: 6, c: 15, b: 0, s: 4, v: 4
+
+AAT: 182.864227, C: 17, B: 0, S: 6, c: 15, b: 0, s: 5, v: 4
+
+AAT: 183.071762, C: 17, B: 0, S: 6, c: 15, b: 0, s: 6, v: 4
+
+AAT: 180.926270, C: 17, B: 0, S: 7, c: 15, b: 0, s: 0, v: 4
+
+AAT: 181.655472, C: 17, B: 0, S: 7, c: 15, b: 0, s: 1, v: 4
+
+AAT: 182.780624, C: 17, B: 0, S: 7, c: 15, b: 0, s: 2, v: 4
+
+AAT: 182.629395, C: 17, B: 0, S: 7, c: 15, b: 0, s: 3, v: 4
+
+AAT: 182.883682, C: 17, B: 0, S: 7, c: 15, b: 0, s: 4, v: 4
+
+AAT: 183.074890, C: 17, B: 0, S: 7, c: 15, b: 0, s: 5, v: 4
+
+AAT: 183.281754, C: 17, B: 0, S: 7, c: 15, b: 0, s: 6, v: 4
+
+AAT: 183.493576, C: 17, B: 0, S: 7, c: 15, b: 0, s: 7, v: 4
+
+AAT: 181.137619, C: 17, B: 0, S: 8, c: 15, b: 0, s: 0, v: 4
+
+AAT: 181.865601, C: 17, B: 0, S: 8, c: 15, b: 0, s: 1, v: 4
+
+AAT: 182.988708, C: 17, B: 0, S: 8, c: 15, b: 0, s: 2, v: 4
+
+AAT: 182.840134, C: 17, B: 0, S: 8, c: 15, b: 0, s: 3, v: 4
+
+AAT: 183.092361, C: 17, B: 0, S: 8, c: 15, b: 0, s: 4, v: 4
+
+AAT: 183.284897, C: 17, B: 0, S: 8, c: 15, b: 0, s: 5, v: 4
+
+AAT: 183.491760, C: 17, B: 0, S: 8, c: 15, b: 0, s: 6, v: 4
+
+AAT: 183.703598, C: 17, B: 0, S: 8, c: 15, b: 0, s: 7, v: 4
+
+AAT: 184.255066, C: 17, B: 0, S: 8, c: 15, b: 0, s: 8, v: 4
+
+AAT: 181.358398, C: 17, B: 0, S: 9, c: 15, b: 0, s: 0, v: 4
+
+AAT: 182.095901, C: 17, B: 0, S: 9, c: 15, b: 0, s: 1, v: 4
+
+AAT: 183.200150, C: 17, B: 0, S: 9, c: 15, b: 0, s: 2, v: 4
+
+AAT: 183.050156, C: 17, B: 0, S: 9, c: 15, b: 0, s: 3, v: 4
+
+AAT: 183.303040, C: 17, B: 0, S: 9, c: 15, b: 0, s: 4, v: 4
+
+AAT: 183.494888, C: 17, B: 0, S: 9, c: 15, b: 0, s: 5, v: 4
+
+AAT: 183.701752, C: 17, B: 0, S: 9, c: 15, b: 0, s: 6, v: 4
+
+AAT: 183.912231, C: 17, B: 0, S: 9, c: 15, b: 0, s: 7, v: 4
+
+AAT: 184.110184, C: 17, B: 0, S: 9, c: 15, b: 0, s: 8, v: 4
+
+AAT: 184.311783, C: 17, B: 0, S: 9, c: 15, b: 0, s: 9, v: 4
+
+AAT: 181.559021, C: 17, B: 0, S: 10, c: 15, b: 0, s: 0, v: 4
+
+AAT: 182.285156, C: 17, B: 0, S: 10, c: 15, b: 0, s: 1, v: 4
+
+AAT: 183.408188, C: 17, B: 0, S: 10, c: 15, b: 0, s: 2, v: 4
+
+AAT: 183.258850, C: 17, B: 0, S: 10, c: 15, b: 0, s: 3, v: 4
+
+AAT: 183.511032, C: 17, B: 0, S: 10, c: 15, b: 0, s: 4, v: 4
+
+AAT: 183.702179, C: 17, B: 0, S: 10, c: 15, b: 0, s: 5, v: 4
+
+AAT: 183.909729, C: 17, B: 0, S: 10, c: 15, b: 0, s: 6, v: 4
+
+AAT: 184.122253, C: 17, B: 0, S: 10, c: 15, b: 0, s: 7, v: 4
+
+AAT: 184.320160, C: 17, B: 0, S: 10, c: 15, b: 0, s: 8, v: 4
+
+AAT: 184.521103, C: 17, B: 0, S: 10, c: 15, b: 0, s: 9, v: 4
+^C
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear./script
+
+AAT: 7.339333, C: 17, B: 8, S: 0, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.468823, C: 17, B: 8, S: 1, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.843294, C: 17, B: 8, S: 1, c: 15, b: 8, s: 1, v: 4
+
+AAT: 6.348673, C: 17, B: 8, S: 2, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.771270, C: 17, B: 8, S: 2, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.027978, C: 17, B: 8, S: 2, c: 15, b: 8, s: 2, v: 4
+
+AAT: 6.311509, C: 17, B: 8, S: 3, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.733014, C: 17, B: 8, S: 3, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.000483, C: 17, B: 8, S: 3, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.197997, C: 17, B: 8, S: 3, c: 15, b: 8, s: 3, v: 4
+
+AAT: 6.317289, C: 17, B: 8, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.732212, C: 17, B: 8, S: 4, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.003604, C: 17, B: 8, S: 4, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.202940, C: 17, B: 8, S: 4, c: 15, b: 8, s: 3, v: 4
+
+AAT: 7.395061, C: 17, B: 8, S: 4, c: 15, b: 8, s: 4, v: 4
+
+AAT: 6.328292, C: 17, B: 8, S: 5, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.745531, C: 17, B: 8, S: 5, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.017972, C: 17, B: 8, S: 5, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.215382, C: 17, B: 8, S: 5, c: 15, b: 8, s: 3, v: 4
+
+AAT: 7.411214, C: 17, B: 8, S: 5, c: 15, b: 8, s: 4, v: 4
+
+AAT: 7.606993, C: 17, B: 8, S: 5, c: 15, b: 8, s: 5, v: 4
+
+AAT: 6.349741, C: 17, B: 8, S: 6, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.769901, C: 17, B: 8, S: 6, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.037338, C: 17, B: 8, S: 6, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.232824, C: 17, B: 8, S: 6, c: 15, b: 8, s: 3, v: 4
+
+AAT: 7.426743, C: 17, B: 8, S: 6, c: 15, b: 8, s: 4, v: 4
+
+AAT: 7.622504, C: 17, B: 8, S: 6, c: 15, b: 8, s: 5, v: 4
+
+AAT: 7.822721, C: 17, B: 8, S: 6, c: 15, b: 8, s: 6, v: 4
+
+AAT: 6.392081, C: 17, B: 8, S: 7, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.806552, C: 17, B: 8, S: 7, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.072950, C: 17, B: 8, S: 7, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.272138, C: 17, B: 8, S: 7, c: 15, b: 8, s: 3, v: 4
+
+AAT: 7.464119, C: 17, B: 8, S: 7, c: 15, b: 8, s: 4, v: 4
+
+AAT: 7.657972, C: 17, B: 8, S: 7, c: 15, b: 8, s: 5, v: 4
+
+AAT: 7.860068, C: 17, B: 8, S: 7, c: 15, b: 8, s: 6, v: 4
+
+AAT: 8.043098, C: 17, B: 8, S: 7, c: 15, b: 8, s: 7, v: 4
+
+AAT: 6.343311, C: 17, B: 8, S: 8, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.757245, C: 17, B: 8, S: 8, c: 15, b: 8, s: 1, v: 4
+
+AAT: 7.019213, C: 17, B: 8, S: 8, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.223338, C: 17, B: 8, S: 8, c: 15, b: 8, s: 3, v: 4
+
+AAT: 7.414105, C: 17, B: 8, S: 8, c: 15, b: 8, s: 4, v: 4
+
+AAT: 7.607998, C: 17, B: 8, S: 8, c: 15, b: 8, s: 5, v: 4
+
+AAT: 7.810684, C: 17, B: 8, S: 8, c: 15, b: 8, s: 6, v: 4
+
+AAT: 8.013678, C: 17, B: 8, S: 8, c: 15, b: 8, s: 7, v: 4
+
+AAT: 6.306147, C: 17, B: 8, S: 9, c: 15, b: 8, s: 0, v: 4
+
+AAT: 6.720218, C: 17, B: 8, S: 9, c: 15, b: 8, s: 1, v: 4
+
+AAT: 6.979846, C: 17, B: 8, S: 9, c: 15, b: 8, s: 2, v: 4
+
+AAT: 7.180788, C: 17, B: 8, S: 9, c: 15, b: 8, s: 3, v: 4
+
+AAT: 7.367212, C: 17, B: 8, S: 9, c: 15, b: 8, s: 4, v: 4
+
+AAT: 7.561143, C: 17, B: 8, S: 9, c: 15, b: 8, s: 5, v: 4
+
+AAT: 7.761301, C: 17, B: 8, S: 9, c: 15, b: 8, s: 6, v: 4
+
+AAT: 7.943072, C: 17, B: 8, S: 9, c: 15, b: 8, s: 7, v: 4
+
+AAT: 5.695854, C: 17, B: 9, S: 0, c: 15, b: 8, s: 0, v: 4
+
+AAT: 5.979944, C: 17, B: 9, S: 0, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.836951, C: 17, B: 9, S: 1, c: 15, b: 8, s: 0, v: 4
+
+AAT: 5.052930, C: 17, B: 9, S: 1, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.712117, C: 17, B: 9, S: 1, c: 15, b: 9, s: 0, v: 4
+
+AAT: 5.061543, C: 17, B: 9, S: 1, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.630913, C: 17, B: 9, S: 2, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.949593, C: 17, B: 9, S: 2, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.167275, C: 17, B: 9, S: 2, c: 15, b: 8, s: 2, v: 4
+
+AAT: 4.442954, C: 17, B: 9, S: 2, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.898237, C: 17, B: 9, S: 2, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.243322, C: 17, B: 9, S: 2, c: 15, b: 9, s: 2, v: 4
+
+AAT: 4.557768, C: 17, B: 9, S: 3, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.864675, C: 17, B: 9, S: 3, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.099792, C: 17, B: 9, S: 3, c: 15, b: 8, s: 2, v: 4
+
+AAT: 5.298890, C: 17, B: 9, S: 3, c: 15, b: 8, s: 3, v: 4
+
+AAT: 4.378942, C: 17, B: 9, S: 3, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.836706, C: 17, B: 9, S: 3, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.176904, C: 17, B: 9, S: 3, c: 15, b: 9, s: 2, v: 4
+
+AAT: 5.388149, C: 17, B: 9, S: 3, c: 15, b: 9, s: 3, v: 4
+
+AAT: 4.568191, C: 17, B: 9, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.870626, C: 17, B: 9, S: 4, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.109161, C: 17, B: 9, S: 4, c: 15, b: 8, s: 2, v: 4
+
+AAT: 5.308208, C: 17, B: 9, S: 4, c: 15, b: 8, s: 3, v: 4
+
+AAT: 5.504298, C: 17, B: 9, S: 4, c: 15, b: 8, s: 4, v: 4
+
+AAT: 4.392899, C: 17, B: 9, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.853848, C: 17, B: 9, S: 4, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.192798, C: 17, B: 9, S: 4, c: 15, b: 9, s: 2, v: 4
+
+AAT: 5.400692, C: 17, B: 9, S: 4, c: 15, b: 9, s: 3, v: 4
+
+AAT: 5.602941, C: 17, B: 9, S: 4, c: 15, b: 9, s: 4, v: 4
+
+AAT: 4.580935, C: 17, B: 9, S: 5, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.883945, C: 17, B: 9, S: 5, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.122905, C: 17, B: 9, S: 5, c: 15, b: 8, s: 2, v: 4
+
+AAT: 5.317526, C: 17, B: 9, S: 5, c: 15, b: 8, s: 3, v: 4
+
+AAT: 5.516706, C: 17, B: 9, S: 5, c: 15, b: 8, s: 4, v: 4
+
+AAT: 5.711699, C: 17, B: 9, S: 5, c: 15, b: 8, s: 5, v: 4
+
+AAT: 4.407409, C: 17, B: 9, S: 5, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.857877, C: 17, B: 9, S: 5, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.201390, C: 17, B: 9, S: 5, c: 15, b: 9, s: 2, v: 4
+
+AAT: 5.405219, C: 17, B: 9, S: 5, c: 15, b: 9, s: 3, v: 4
+
+AAT: 5.611464, C: 17, B: 9, S: 5, c: 15, b: 9, s: 4, v: 4
+
+AAT: 5.809976, C: 17, B: 9, S: 5, c: 15, b: 9, s: 5, v: 4
+
+AAT: 4.600643, C: 17, B: 9, S: 6, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.905860, C: 17, B: 9, S: 6, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.147269, C: 17, B: 9, S: 6, c: 15, b: 8, s: 2, v: 4
+
+AAT: 5.345591, C: 17, B: 9, S: 6, c: 15, b: 8, s: 3, v: 4
+
+AAT: 5.540350, C: 17, B: 9, S: 6, c: 15, b: 8, s: 4, v: 4
+
+AAT: 5.735316, C: 17, B: 9, S: 6, c: 15, b: 8, s: 5, v: 4
+
+AAT: 5.937735, C: 17, B: 9, S: 6, c: 15, b: 8, s: 6, v: 4
+
+AAT: 4.429108, C: 17, B: 9, S: 6, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.878140, C: 17, B: 9, S: 6, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.223259, C: 17, B: 9, S: 6, c: 15, b: 9, s: 2, v: 4
+
+AAT: 5.433125, C: 17, B: 9, S: 6, c: 15, b: 9, s: 3, v: 4
+
+AAT: 5.634698, C: 17, B: 9, S: 6, c: 15, b: 9, s: 4, v: 4
+
+AAT: 5.835873, C: 17, B: 9, S: 6, c: 15, b: 9, s: 5, v: 4
+
+AAT: 6.035284, C: 17, B: 9, S: 6, c: 15, b: 9, s: 6, v: 4
+
+AAT: 4.634859, C: 17, B: 9, S: 7, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.940668, C: 17, B: 9, S: 7, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.183506, C: 17, B: 9, S: 7, c: 15, b: 8, s: 2, v: 4
+
+AAT: 5.379905, C: 17, B: 9, S: 7, c: 15, b: 8, s: 3, v: 4
+
+AAT: 5.575855, C: 17, B: 9, S: 7, c: 15, b: 8, s: 4, v: 4
+
+AAT: 5.770161, C: 17, B: 9, S: 7, c: 15, b: 8, s: 5, v: 4
+
+AAT: 5.970090, C: 17, B: 9, S: 7, c: 15, b: 8, s: 6, v: 4
+
+AAT: 6.114851, C: 17, B: 9, S: 7, c: 15, b: 8, s: 7, v: 4
+
+AAT: 4.457994, C: 17, B: 9, S: 7, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.913390, C: 17, B: 9, S: 7, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.258404, C: 17, B: 9, S: 7, c: 15, b: 9, s: 2, v: 4
+
+AAT: 5.469714, C: 17, B: 9, S: 7, c: 15, b: 9, s: 3, v: 4
+
+AAT: 5.672646, C: 17, B: 9, S: 7, c: 15, b: 9, s: 4, v: 4
+
+AAT: 5.871801, C: 17, B: 9, S: 7, c: 15, b: 9, s: 5, v: 4
+
+AAT: 6.071855, C: 17, B: 9, S: 7, c: 15, b: 9, s: 6, v: 4
+
+AAT: 4.583767, C: 17, B: 9, S: 8, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.885221, C: 17, B: 9, S: 8, c: 15, b: 8, s: 1, v: 4
+
+AAT: 5.125394, C: 17, B: 9, S: 8, c: 15, b: 8, s: 2, v: 4
+
+AAT: 5.322982, C: 17, B: 9, S: 8, c: 15, b: 8, s: 3, v: 4
+
+AAT: 5.519598, C: 17, B: 9, S: 8, c: 15, b: 8, s: 4, v: 4
+
+AAT: 5.713326, C: 17, B: 9, S: 8, c: 15, b: 8, s: 5, v: 4
+
+AAT: 5.912595, C: 17, B: 9, S: 8, c: 15, b: 8, s: 6, v: 4
+
+AAT: 6.077942, C: 17, B: 9, S: 8, c: 15, b: 8, s: 7, v: 4
+
+AAT: 4.411677, C: 17, B: 9, S: 8, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.856854, C: 17, B: 9, S: 8, c: 15, b: 9, s: 1, v: 4
+
+AAT: 5.197296, C: 17, B: 9, S: 8, c: 15, b: 9, s: 2, v: 4
+
+AAT: 5.408781, C: 17, B: 9, S: 8, c: 15, b: 9, s: 3, v: 4
+
+AAT: 5.611620, C: 17, B: 9, S: 8, c: 15, b: 9, s: 4, v: 4
+
+AAT: 5.808756, C: 17, B: 9, S: 8, c: 15, b: 9, s: 5, v: 4
+
+AAT: 6.008850, C: 17, B: 9, S: 8, c: 15, b: 9, s: 6, v: 4
+
+AAT: 4.997724, C: 17, B: 10, S: 0, c: 15, b: 8, s: 0, v: 4
+
+AAT: 5.362277, C: 17, B: 10, S: 0, c: 15, b: 9, s: 0, v: 4
+
+AAT: 6.138443, C: 17, B: 10, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 4.355862, C: 17, B: 10, S: 1, c: 15, b: 8, s: 0, v: 4
+
+AAT: 4.140556, C: 17, B: 10, S: 1, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.469363, C: 17, B: 10, S: 1, c: 15, b: 9, s: 0, v: 4
+
+AAT: 4.320399, C: 17, B: 10, S: 1, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.774847, C: 17, B: 10, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 4.879896, C: 17, B: 10, S: 1, c: 15, b: 10, s: 1, v: 4
+
+AAT: 3.868947, C: 17, B: 10, S: 2, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.968454, C: 17, B: 10, S: 2, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.106962, C: 17, B: 10, S: 2, c: 15, b: 8, s: 2, v: 4
+
+AAT: 3.714140, C: 17, B: 10, S: 2, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.942306, C: 17, B: 10, S: 2, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.165292, C: 17, B: 10, S: 2, c: 15, b: 9, s: 2, v: 4
+
+AAT: 3.863876, C: 17, B: 10, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 4.146588, C: 17, B: 10, S: 2, c: 15, b: 10, s: 1, v: 4
+
+AAT: 4.299082, C: 17, B: 10, S: 2, c: 15, b: 10, s: 2, v: 4
+
+AAT: 3.619964, C: 17, B: 10, S: 3, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.845469, C: 17, B: 10, S: 3, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.036355, C: 17, B: 10, S: 3, c: 15, b: 8, s: 2, v: 4
+
+AAT: 4.239665, C: 17, B: 10, S: 3, c: 15, b: 8, s: 3, v: 4
+
+AAT: 3.495296, C: 17, B: 10, S: 3, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.825830, C: 17, B: 10, S: 3, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.082278, C: 17, B: 10, S: 3, c: 15, b: 9, s: 2, v: 4
+
+AAT: 4.273987, C: 17, B: 10, S: 3, c: 15, b: 9, s: 3, v: 4
+
+AAT: 3.559877, C: 17, B: 10, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.945432, C: 17, B: 10, S: 3, c: 15, b: 10, s: 1, v: 4
+
+AAT: 4.185061, C: 17, B: 10, S: 3, c: 15, b: 10, s: 2, v: 4
+
+AAT: 4.421556, C: 17, B: 10, S: 3, c: 15, b: 10, s: 3, v: 4
+
+AAT: 3.611816, C: 17, B: 10, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.849578, C: 17, B: 10, S: 4, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.042600, C: 17, B: 10, S: 4, c: 15, b: 8, s: 2, v: 4
+
+AAT: 4.237109, C: 17, B: 10, S: 4, c: 15, b: 8, s: 3, v: 4
+
+AAT: 4.441876, C: 17, B: 10, S: 4, c: 15, b: 8, s: 4, v: 4
+
+AAT: 3.488793, C: 17, B: 10, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.827986, C: 17, B: 10, S: 4, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.084233, C: 17, B: 10, S: 4, c: 15, b: 9, s: 2, v: 4
+
+AAT: 4.280519, C: 17, B: 10, S: 4, c: 15, b: 9, s: 3, v: 4
+
+AAT: 4.477465, C: 17, B: 10, S: 4, c: 15, b: 9, s: 4, v: 4
+
+AAT: 3.555894, C: 17, B: 10, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.937424, C: 17, B: 10, S: 4, c: 15, b: 10, s: 1, v: 4
+
+AAT: 4.179414, C: 17, B: 10, S: 4, c: 15, b: 10, s: 2, v: 4
+
+AAT: 4.422544, C: 17, B: 10, S: 4, c: 15, b: 10, s: 3, v: 4
+
+AAT: 4.584496, C: 17, B: 10, S: 4, c: 15, b: 10, s: 4, v: 4
+
+AAT: 3.622819, C: 17, B: 10, S: 5, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.854301, C: 17, B: 10, S: 5, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.058843, C: 17, B: 10, S: 5, c: 15, b: 8, s: 2, v: 4
+
+AAT: 4.249552, C: 17, B: 10, S: 5, c: 15, b: 8, s: 3, v: 4
+
+AAT: 4.448042, C: 17, B: 10, S: 5, c: 15, b: 8, s: 4, v: 4
+
+AAT: 4.642749, C: 17, B: 10, S: 5, c: 15, b: 8, s: 5, v: 4
+
+AAT: 3.493350, C: 17, B: 10, S: 5, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.832016, C: 17, B: 10, S: 5, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.092162, C: 17, B: 10, S: 5, c: 15, b: 9, s: 2, v: 4
+
+AAT: 4.281038, C: 17, B: 10, S: 5, c: 15, b: 9, s: 3, v: 4
+
+AAT: 4.479969, C: 17, B: 10, S: 5, c: 15, b: 9, s: 4, v: 4
+
+AAT: 4.683814, C: 17, B: 10, S: 5, c: 15, b: 9, s: 5, v: 4
+
+AAT: 3.566363, C: 17, B: 10, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.939405, C: 17, B: 10, S: 5, c: 15, b: 10, s: 1, v: 4
+
+AAT: 4.185655, C: 17, B: 10, S: 5, c: 15, b: 10, s: 2, v: 4
+
+AAT: 4.419928, C: 17, B: 10, S: 5, c: 15, b: 10, s: 3, v: 4
+
+AAT: 4.575260, C: 17, B: 10, S: 5, c: 15, b: 10, s: 4, v: 4
+
+AAT: 4.834480, C: 17, B: 10, S: 5, c: 15, b: 10, s: 5, v: 4
+
+AAT: 3.636143, C: 17, B: 10, S: 6, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.861481, C: 17, B: 10, S: 6, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.062588, C: 17, B: 10, S: 6, c: 15, b: 8, s: 2, v: 4
+
+AAT: 4.253870, C: 17, B: 10, S: 6, c: 15, b: 8, s: 3, v: 4
+
+AAT: 4.452960, C: 17, B: 10, S: 6, c: 15, b: 8, s: 4, v: 4
+
+AAT: 4.650776, C: 17, B: 10, S: 6, c: 15, b: 8, s: 5, v: 4
+
+AAT: 4.852667, C: 17, B: 10, S: 6, c: 15, b: 8, s: 6, v: 4
+
+AAT: 3.512836, C: 17, B: 10, S: 6, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.842289, C: 17, B: 10, S: 6, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.102745, C: 17, B: 10, S: 6, c: 15, b: 9, s: 2, v: 4
+
+AAT: 4.291576, C: 17, B: 10, S: 6, c: 15, b: 9, s: 3, v: 4
+
+AAT: 4.493173, C: 17, B: 10, S: 6, c: 15, b: 9, s: 4, v: 4
+
+AAT: 4.693662, C: 17, B: 10, S: 6, c: 15, b: 9, s: 5, v: 4
+
+AAT: 4.890493, C: 17, B: 10, S: 6, c: 15, b: 9, s: 6, v: 4
+
+AAT: 3.588972, C: 17, B: 10, S: 6, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.964697, C: 17, B: 10, S: 6, c: 15, b: 10, s: 1, v: 4
+
+AAT: 4.203781, C: 17, B: 10, S: 6, c: 15, b: 10, s: 2, v: 4
+
+AAT: 4.433172, C: 17, B: 10, S: 6, c: 15, b: 10, s: 3, v: 4
+
+AAT: 4.588145, C: 17, B: 10, S: 6, c: 15, b: 10, s: 4, v: 4
+
+AAT: 4.857359, C: 17, B: 10, S: 6, c: 15, b: 10, s: 5, v: 4
+
+AAT: 3.674422, C: 17, B: 10, S: 7, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.896289, C: 17, B: 10, S: 7, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.106322, C: 17, B: 10, S: 7, c: 15, b: 8, s: 2, v: 4
+
+AAT: 4.293183, C: 17, B: 10, S: 7, c: 15, b: 8, s: 3, v: 4
+
+AAT: 4.491585, C: 17, B: 10, S: 7, c: 15, b: 8, s: 4, v: 4
+
+AAT: 4.685620, C: 17, B: 10, S: 7, c: 15, b: 8, s: 5, v: 4
+
+AAT: 4.886894, C: 17, B: 10, S: 7, c: 15, b: 8, s: 6, v: 4
+
+AAT: 5.063987, C: 17, B: 10, S: 7, c: 15, b: 8, s: 7, v: 4
+
+AAT: 3.544488, C: 17, B: 10, S: 7, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.875665, C: 17, B: 10, S: 7, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.140545, C: 17, B: 10, S: 7, c: 15, b: 9, s: 2, v: 4
+
+AAT: 4.334177, C: 17, B: 10, S: 7, c: 15, b: 9, s: 3, v: 4
+
+AAT: 4.531120, C: 17, B: 10, S: 7, c: 15, b: 9, s: 4, v: 4
+
+AAT: 4.733603, C: 17, B: 10, S: 7, c: 15, b: 9, s: 5, v: 4
+
+AAT: 4.931074, C: 17, B: 10, S: 7, c: 15, b: 9, s: 6, v: 4
+
+AAT: 3.619673, C: 17, B: 10, S: 7, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.998648, C: 17, B: 10, S: 7, c: 15, b: 10, s: 1, v: 4
+
+AAT: 4.231696, C: 17, B: 10, S: 7, c: 15, b: 10, s: 2, v: 4
+
+AAT: 4.462275, C: 17, B: 10, S: 7, c: 15, b: 10, s: 3, v: 4
+
+AAT: 4.626006, C: 17, B: 10, S: 7, c: 15, b: 10, s: 4, v: 4
+
+AAT: 4.898832, C: 17, B: 10, S: 7, c: 15, b: 10, s: 5, v: 4
+
+AAT: 4.685510, C: 17, B: 11, S: 0, c: 15, b: 8, s: 0, v: 4
+
+AAT: 5.076391, C: 17, B: 11, S: 0, c: 15, b: 9, s: 0, v: 4
+
+AAT: 5.947680, C: 17, B: 11, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 6.898539, C: 17, B: 11, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 4.127214, C: 17, B: 11, S: 1, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.683142, C: 17, B: 11, S: 1, c: 15, b: 8, s: 1, v: 4
+
+AAT: 4.326697, C: 17, B: 11, S: 1, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.920794, C: 17, B: 11, S: 1, c: 15, b: 9, s: 1, v: 4
+
+AAT: 4.833809, C: 17, B: 11, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 4.726710, C: 17, B: 11, S: 1, c: 15, b: 10, s: 1, v: 4
+
+AAT: 5.607568, C: 17, B: 11, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 5.728830, C: 17, B: 11, S: 1, c: 15, b: 11, s: 1, v: 4
+
+AAT: 3.545125, C: 17, B: 11, S: 2, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.497531, C: 17, B: 11, S: 2, c: 15, b: 8, s: 1, v: 4
+
+AAT: 3.583366, C: 17, B: 11, S: 2, c: 15, b: 8, s: 2, v: 4
+
+AAT: 3.475257, C: 17, B: 11, S: 2, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.521472, C: 17, B: 11, S: 2, c: 15, b: 9, s: 1, v: 4
+
+AAT: 3.638890, C: 17, B: 11, S: 2, c: 15, b: 9, s: 2, v: 4
+
+AAT: 3.771964, C: 17, B: 11, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.767621, C: 17, B: 11, S: 2, c: 15, b: 10, s: 1, v: 4
+
+AAT: 3.795661, C: 17, B: 11, S: 2, c: 15, b: 10, s: 2, v: 4
+
+AAT: 3.932013, C: 17, B: 11, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 4.336918, C: 17, B: 11, S: 2, c: 15, b: 11, s: 1, v: 4
+
+AAT: 4.025175, C: 17, B: 11, S: 2, c: 15, b: 11, s: 2, v: 4
+
+AAT: 3.216058, C: 17, B: 11, S: 3, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.382529, C: 17, B: 11, S: 3, c: 15, b: 8, s: 1, v: 4
+
+AAT: 3.522131, C: 17, B: 11, S: 3, c: 15, b: 8, s: 2, v: 4
+
+AAT: 3.712240, C: 17, B: 11, S: 3, c: 15, b: 8, s: 3, v: 4
+
+AAT: 3.128677, C: 17, B: 11, S: 3, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.366908, C: 17, B: 11, S: 3, c: 15, b: 9, s: 1, v: 4
+
+AAT: 3.556540, C: 17, B: 11, S: 3, c: 15, b: 9, s: 2, v: 4
+
+AAT: 3.728930, C: 17, B: 11, S: 3, c: 15, b: 9, s: 3, v: 4
+
+AAT: 3.202631, C: 17, B: 11, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.494534, C: 17, B: 11, S: 3, c: 15, b: 10, s: 1, v: 4
+
+AAT: 3.682339, C: 17, B: 11, S: 3, c: 15, b: 10, s: 2, v: 4
+
+AAT: 3.897471, C: 17, B: 11, S: 3, c: 15, b: 10, s: 3, v: 4
+
+AAT: 3.222455, C: 17, B: 11, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 3.581174, C: 17, B: 11, S: 3, c: 15, b: 11, s: 1, v: 4
+
+AAT: 3.822443, C: 17, B: 11, S: 3, c: 15, b: 11, s: 2, v: 4
+
+AAT: 3.970673, C: 17, B: 11, S: 3, c: 15, b: 11, s: 3, v: 4
+
+AAT: 3.187599, C: 17, B: 11, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.370060, C: 17, B: 11, S: 4, c: 15, b: 8, s: 1, v: 4
+
+AAT: 3.518379, C: 17, B: 11, S: 4, c: 15, b: 8, s: 2, v: 4
+
+AAT: 3.707809, C: 17, B: 11, S: 4, c: 15, b: 8, s: 3, v: 4
+
+AAT: 3.906296, C: 17, B: 11, S: 4, c: 15, b: 8, s: 4, v: 4
+
+AAT: 3.092314, C: 17, B: 11, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.341591, C: 17, B: 11, S: 4, c: 15, b: 9, s: 1, v: 4
+
+AAT: 3.547210, C: 17, B: 11, S: 4, c: 15, b: 9, s: 2, v: 4
+
+AAT: 3.722769, C: 17, B: 11, S: 4, c: 15, b: 9, s: 3, v: 4
+
+AAT: 3.915061, C: 17, B: 11, S: 4, c: 15, b: 9, s: 4, v: 4
+
+AAT: 3.133905, C: 17, B: 11, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.446564, C: 17, B: 11, S: 4, c: 15, b: 10, s: 1, v: 4
+
+AAT: 3.652920, C: 17, B: 11, S: 4, c: 15, b: 10, s: 2, v: 4
+
+AAT: 3.861694, C: 17, B: 11, S: 4, c: 15, b: 10, s: 3, v: 4
+
+AAT: 4.017209, C: 17, B: 11, S: 4, c: 15, b: 10, s: 4, v: 4
+
+AAT: 3.128911, C: 17, B: 11, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 3.485455, C: 17, B: 11, S: 4, c: 15, b: 11, s: 1, v: 4
+
+AAT: 3.770857, C: 17, B: 11, S: 4, c: 15, b: 11, s: 2, v: 4
+
+AAT: 3.950962, C: 17, B: 11, S: 4, c: 15, b: 11, s: 3, v: 4
+
+AAT: 4.227491, C: 17, B: 11, S: 4, c: 15, b: 11, s: 4, v: 4
+
+AAT: 3.186996, C: 17, B: 11, S: 5, c: 15, b: 8, s: 0, v: 4
+
+AAT: 3.360048, C: 17, B: 11, S: 5, c: 15, b: 8, s: 1, v: 4
+
+AAT: 3.526499, C: 17, B: 11, S: 5, c: 15, b: 8, s: 2, v: 4
+
+AAT: 3.721501, C: 17, B: 11, S: 5, c: 15, b: 8, s: 3, v: 4
+
+AAT: 3.918080, C: 17, B: 11, S: 5, c: 15, b: 8, s: 4, v: 4
+
+AAT: 4.119500, C: 17, B: 11, S: 5, c: 15, b: 8, s: 5, v: 4
+
+AAT: 3.086917, C: 17, B: 11, S: 5, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.342499, C: 17, B: 11, S: 5, c: 15, b: 9, s: 1, v: 4
+
+AAT: 3.547836, C: 17, B: 11, S: 5, c: 15, b: 9, s: 2, v: 4
+
+AAT: 3.735980, C: 17, B: 11, S: 5, c: 15, b: 9, s: 3, v: 4
+
+AAT: 3.930940, C: 17, B: 11, S: 5, c: 15, b: 9, s: 4, v: 4
+
+AAT: 4.128090, C: 17, B: 11, S: 5, c: 15, b: 9, s: 5, v: 4
+
+AAT: 3.137437, C: 17, B: 11, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 3.447214, C: 17, B: 11, S: 5, c: 15, b: 10, s: 1, v: 4
+
+AAT: 3.643079, C: 17, B: 11, S: 5, c: 15, b: 10, s: 2, v: 4
+^C
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ mak
+No command 'mak' found, did you mean:
+ Command 'gak' from package 'gui-apt-key' (universe)
+ Command 'man' from package 'man-db' (main)
+ Command 'mad' from package 'mmv' (universe)
+ Command 'mag' from package 'texlive-binaries' (main)
+ Command 'map' from package 'sgt-puzzles' (universe)
+ Command 'make' from package 'make' (main)
+ Command 'maki' from package 'maki' (universe)
+ Command 'mark' from package 'mailutils-mh' (universe)
+ Command 'mark' from package 'nmh' (universe)
+ Command 'maq' from package 'maq' (universe)
+ Command 'mat' from package 'mat' (universe)
+ Command 'mawk' from package 'mawk' (main)
+mak: command not found
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+cachesim_driver.cpp: In function ‘int main(int, char**)’:
+cachesim_driver.cpp:106:14: error: base operand of ‘->’ has non-pointer type ‘cache_stats_t’
+     if (stats->avg_access_time_l1 <= 3.044891)
+              ^
+make: *** [cachesim_driver.o] Error 1
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear[1Pmake clean[K clean[5Pclear[2Pmake clean[5Pclear./script[3Pclear./script
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ ./script[K./script[K[K[K[K[K[K[K[K./cachesim <  ast[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K-C [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CC  17 -B 12 -S 5 c-[K[K-c 15 -b 9 -s 0 -v 4 < traces/astar.trace
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean./cachesim -C  17 -B 12 -S 5 -c 15 -b 9 -s 0 -v 4 < traces/astar.trace
+
+AAT: 3.044891, C: 17, B: 12, S: 5, c: 15, b: 9, s: 0, v: 4
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear./cachesim -C  17 -B 12 -S 5 -c 15 -b 9 -s 0 -v 4 < traces/astar.trace[A]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C clean./cachesim -C  17 -B 12 -S 5 -c 15 -b 9 -s 0 -v 4 < traces/astar.trace[A]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ [C[C[5Pscript
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pclear./script
+
+AAT: 3.046418, C: 17, B: 12, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 3.044891, C: 17, B: 12, S: 5, c: 15, b: 9, s: 0, v: 4
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear[1Pmake clean[5Pclear./script
+
+AAT: 2.000727, C: 17, B: 10, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000772, C: 17, B: 10, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000821, C: 17, B: 10, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000873, C: 17, B: 10, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000926, C: 17, B: 10, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000978, C: 17, B: 10, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000642, C: 17, B: 11, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000365, C: 17, B: 11, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000688, C: 17, B: 11, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000394, C: 17, B: 11, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000737, C: 17, B: 11, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000424, C: 17, B: 11, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000789, C: 17, B: 11, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000454, C: 17, B: 11, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000841, C: 17, B: 11, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000484, C: 17, B: 11, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000893, C: 17, B: 11, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000514, C: 17, B: 11, S: 5, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000945, C: 17, B: 11, S: 6, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000544, C: 17, B: 11, S: 6, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000593, C: 17, B: 12, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000338, C: 17, B: 12, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000178, C: 17, B: 12, S: 0, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000639, C: 17, B: 12, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000366, C: 17, B: 12, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000193, C: 17, B: 12, S: 1, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000688, C: 17, B: 12, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000396, C: 17, B: 12, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000209, C: 17, B: 12, S: 2, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000740, C: 17, B: 12, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000426, C: 17, B: 12, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000225, C: 17, B: 12, S: 3, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000792, C: 17, B: 12, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000457, C: 17, B: 12, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000242, C: 17, B: 12, S: 4, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000844, C: 17, B: 12, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000487, C: 17, B: 12, S: 5, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000258, C: 17, B: 12, S: 5, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000597, C: 17, B: 13, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000336, C: 17, B: 13, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000175, C: 17, B: 13, S: 0, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000156, C: 17, B: 13, S: 0, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000642, C: 17, B: 13, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000366, C: 17, B: 13, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000191, C: 17, B: 13, S: 1, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000170, C: 17, B: 13, S: 1, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000671, C: 17, B: 13, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000387, C: 17, B: 13, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000205, C: 17, B: 13, S: 2, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000183, C: 17, B: 13, S: 2, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000724, C: 17, B: 13, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000417, C: 17, B: 13, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000221, C: 17, B: 13, S: 3, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000198, C: 17, B: 13, S: 3, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000776, C: 17, B: 13, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000447, C: 17, B: 13, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000237, C: 17, B: 13, S: 4, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000213, C: 17, B: 13, S: 4, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000600, C: 17, B: 14, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000338, C: 17, B: 14, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000175, C: 17, B: 14, S: 0, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000158, C: 17, B: 14, S: 0, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000117, C: 17, B: 14, S: 0, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000639, C: 17, B: 14, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000362, C: 17, B: 14, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000190, C: 17, B: 14, S: 1, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000170, C: 17, B: 14, S: 1, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000108, C: 17, B: 14, S: 1, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000655, C: 17, B: 14, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000378, C: 17, B: 14, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000201, C: 17, B: 14, S: 2, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000181, C: 17, B: 14, S: 2, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000116, C: 17, B: 14, S: 2, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000707, C: 17, B: 14, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000408, C: 17, B: 14, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000217, C: 17, B: 14, S: 3, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000196, C: 17, B: 14, S: 3, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000126, C: 17, B: 14, S: 3, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000629, C: 17, B: 15, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000349, C: 17, B: 15, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000178, C: 17, B: 15, S: 0, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000163, C: 17, B: 15, S: 0, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000119, C: 17, B: 15, S: 0, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000183, C: 17, B: 15, S: 0, c: 15, b: 15, s: 0, v: 4
+
+AAT: 2.000678, C: 17, B: 15, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000379, C: 17, B: 15, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000197, C: 17, B: 15, S: 1, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000180, C: 17, B: 15, S: 1, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000138, C: 17, B: 15, S: 1, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000196, C: 17, B: 15, S: 1, c: 15, b: 15, s: 0, v: 4
+
+AAT: 2.000707, C: 17, B: 15, S: 2, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000402, C: 17, B: 15, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000205, C: 17, B: 15, S: 2, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000189, C: 17, B: 15, S: 2, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000119, C: 17, B: 15, S: 2, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000155, C: 17, B: 15, S: 2, c: 15, b: 15, s: 0, v: 4
+
+AAT: 2.000766, C: 17, B: 16, S: 0, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000387, C: 17, B: 16, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000188, C: 17, B: 16, S: 0, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000777, C: 17, B: 16, S: 0, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000885, C: 17, B: 16, S: 0, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000697, C: 17, B: 16, S: 1, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.000390, C: 17, B: 16, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000203, C: 17, B: 16, S: 1, c: 15, b: 12, s: 0, v: 4
+
+AAT: 2.000198, C: 17, B: 16, S: 1, c: 15, b: 13, s: 0, v: 4
+
+AAT: 2.000144, C: 17, B: 16, S: 1, c: 15, b: 14, s: 0, v: 4
+
+AAT: 2.000202, C: 17, B: 16, S: 1, c: 15, b: 15, s: 0, v: 4
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ ./script[K./script[Kclear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear[1Pmake clean[5Pclear./script
+
+AAT: 2.131497, C: 17, B: 12, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.135019, C: 17, B: 12, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 2.133076, C: 17, B: 12, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 2.131450, C: 17, B: 12, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.138580, C: 17, B: 12, S: 5, c: 15, b: 8, s: 0, v: 4
+
+AAT: 2.137690, C: 17, B: 12, S: 5, c: 15, b: 9, s: 0, v: 4
+
+AAT: 2.137163, C: 17, B: 12, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.128936, C: 17, B: 13, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 2.122135, C: 17, B: 13, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 2.121732, C: 17, B: 13, S: 4, c: 15, b: 10, s: 0, v: 4
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ ./cachesim -B [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[Kclear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make ce[Klean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear[1Pmake clean[5Pclear./script[3Pclear./script
+
+AAT: 3.366403, C: 17, B: 10, S: 6, c: 15, b: 10, s: 0, v: 4
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make ce[Klean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear[1Pmake clean[2P./script[3Pclear./script
+
+AAT: 2.131497, C: 17, B: 12, S: 3, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.135019, C: 17, B: 12, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 2.133076, C: 17, B: 12, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 2.131450, C: 17, B: 12, S: 4, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.138580, C: 17, B: 12, S: 5, c: 15, b: 8, s: 0, v: 4
+
+AAT: 2.137690, C: 17, B: 12, S: 5, c: 15, b: 9, s: 0, v: 4
+
+AAT: 2.137163, C: 17, B: 12, S: 5, c: 15, b: 10, s: 0, v: 4
+
+AAT: 2.128936, C: 17, B: 13, S: 4, c: 15, b: 8, s: 0, v: 4
+
+AAT: 2.122135, C: 17, B: 13, S: 4, c: 15, b: 9, s: 0, v: 4
+
+AAT: 2.121732, C: 17, B: 13, S: 4, c: 15, b: 10, s: 0, v: 4
+^C
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make clean
+rm -f cachesim *.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ make
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim.o cachesim.cpp
+g++ -g -Wall -lm -std=c++0x   -c -o cachesim_driver.o cachesim_driver.cpp
+g++ -o cachesim cachesim.o cachesim_driver.o
+]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear
+[H[2J]0;mike@ubuntu-VirtualBox: /media/windows-share/C++/ECE 4100/project1mike@ubuntu-VirtualBox:/media/windows-share/C++/ECE 4100/project1$ clear[1Pmake clean[5Pclear./script
+
+AAT: 2.000365, C: 17, B: 11, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000394, C: 17, B: 11, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000424, C: 17, B: 11, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000454, C: 17, B: 11, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000484, C: 17, B: 11, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000338, C: 17, B: 12, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000366, C: 17, B: 12, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000396, C: 17, B: 12, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000426, C: 17, B: 12, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000457, C: 17, B: 12, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000487, C: 17, B: 12, S: 5, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000336, C: 17, B: 13, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000366, C: 17, B: 13, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000387, C: 17, B: 13, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000417, C: 17, B: 13, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000447, C: 17, B: 13, S: 4, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000338, C: 17, B: 14, S: 0, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000362, C: 17, B: 14, S: 1, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000378, C: 17, B: 14, S: 2, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000408, C: 17, B: 14, S: 3, c: 15, b: 11, s: 0, v: 4
+
+AAT: 2.000349, C: 17, B: 15, S: 0, c: 15, b: 11, s: 0

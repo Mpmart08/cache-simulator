@@ -1,0 +1,51 @@
+#!/bin/bash
+
+C=17
+c=15
+v=4
+count=0
+
+B=8
+while [ "$B" -le "$C" ]
+do
+
+    S=0
+    while [ "$S" -le "$C" ]
+    do
+
+        first=$(($B + $S))
+        if [ "$first" -gt "$C" ]
+        then
+            break
+        fi
+
+        b=8
+        while [ "$b" -le "$B" ]
+        do
+
+            s=0
+            while [ "$s" -le 4 ]
+            do
+
+                second=$(($b + $s))
+                if [ "$second" -gt "$c" ]
+                then
+                    break
+                fi
+
+                ./cachesim -C "$C" -B "$B" -S "$S" -c "$c" -b "$b" -s "$s" -v "$v" < traces/astar.trace
+
+                let count=count+1
+                echo $count
+
+                let s=s+1
+            done
+
+            let b=b+1
+        done
+
+        let S=S+1
+    done
+
+    let B=B+1
+done
